@@ -1,0 +1,222 @@
+[
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1736369024,
+        "httpOnly": false,
+        "name": "funnelType",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "free",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1736264624,
+        "httpOnly": true,
+        "name": "redirect_location",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "eyJ0eXBlIjoiIiwibG9jYXRpb24iOiJodHRwczovL2FwcC5ncmFtbWFybHkuY29tLyJ9",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1763983624,
+        "httpOnly": true,
+        "name": "gac",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "AABOUw6Y6tsoEz8Pomyqe2iOITVaE5ptC1TWTPC02sMCbslWNjJNKnKfDtuTjz44iHMCZBSqWh7yjOKkCQf3PwzDwg5UYbtT8YtzRXDxqU3JTSRs",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1766143576,
+        "httpOnly": false,
+        "name": "_uetvid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "361b4310aa5611efacb1bbff80f57c17",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1767007576,
+        "httpOnly": false,
+        "name": "_ga",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GA1.1.622196954.1732447270",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1767007567,
+        "httpOnly": false,
+        "name": "_tq_id.TV-7281365481-1.3988",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "0c50f5dd88aaafcc.1732447271.0.1732447567..",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1763983272,
+        "httpOnly": false,
+        "name": "__podscribe_grammarly_landing_url",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "https://www.grammarly.com/signin/select-account",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1763983272,
+        "httpOnly": false,
+        "name": "__podscribe_grammarly_referrer",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "_",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1736264624,
+        "httpOnly": false,
+        "name": "browser_info",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "CHROME:131:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1763983291,
+        "httpOnly": false,
+        "name": "_clck",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1c564zd%7C2%7Cfr5%7C0%7C1789",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1740223268,
+        "httpOnly": false,
+        "name": "_gcl_au",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1.1.93561903.1732447268",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1763983624,
+        "httpOnly": true,
+        "name": "last_authn_event",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "a596b965-cc7f-44ab-884e-b286e14e215e",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1767007630,
+        "httpOnly": false,
+        "name": "_ga_CBK9K2ZWWE",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GS1.1.1732447270.1.1.1732447630.5.0.0",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1740223576,
+        "httpOnly": false,
+        "name": "_rdt_uuid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "1732447270520.e9e2b7f7-4440-4bad-a39c-5a86c821ff82",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1740223585,
+        "httpOnly": false,
+        "name": "_fbp",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "fb.1.1732447288290.394416181861390241",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1767007624,
+        "httpOnly": true,
+        "name": "tdi",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "xllna2kwuiic1cu0x",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1763983624,
+        "httpOnly": true,
+        "name": "grauth",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "AABOU3sLpSUQHQNWuSWN7JaWYmtkRWldsuuuasG51OsmGOvbotbWQj51e4jVZibJ_WDfM4zgZl9qGv_J",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1763983624,
+        "httpOnly": false,
+        "name": "csrf-token",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "AABOU5JtdJ4b8Va/P65AGrqSI4D4VDPgKN00cw",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1767007262,
+        "httpOnly": false,
+        "name": "gnar_containerId",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "mvrx9dmtb7d404o2",
+        "url": "https://grammarly.com"
+    },
+    {
+        "domain": ".grammarly.com",
+        "expiry": 1763983272,
+        "httpOnly": false,
+        "name": "__podscribe_did",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "pscrb_910bbdee-aaab-445d-c786-39da07164eae",
+        "url": "https://grammarly.com"
+    }
+]
