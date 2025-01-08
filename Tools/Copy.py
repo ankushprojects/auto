@@ -53,7 +53,7 @@ def perform_update():
         options.add_argument('--remote-debugging-port=9222')
         
         # Explicitly set Chrome binary location
-        options.binary_location = "/usr/bin/google-chrome-stable"
+        options.binary_location = "/usr/bin/google-chrome"
         
         # Add extensions
         for ext in [extension_1_path, extension_2_path, extension_3_path, 
