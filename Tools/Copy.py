@@ -9,7 +9,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 def perform_update():
-    # Cookies Download : MUGHAL SEO : SEMRUSH 1 
     extension_1_path = "mughex1.zip"  
     extension_2_path = "mughex2.zip" 
     extension_3_path = "royal1.zip"  
@@ -19,6 +18,36 @@ def perform_update():
 
     driver = None
     try:
+        # Set Chrome binary to the exact path
+        chrome_binary = "/opt/google/chrome/google-chrome"
+        
+        options = webdriver.ChromeOptions()
+        options.add_argument('--start-maximized')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--remote-debugging-port=9222')
+        options.binary_location = chrome_binary
+        
+        print(f"Using Chrome binary at: {chrome_binary}")
+        
+        # Add extensions
+        for ext in [extension_1_path, extension_2_path, extension_3_path, 
+                   extension_4_path, extension_5_path, extension_6_path]:
+            if os.path.exists(ext):
+                options.add_extension(ext)
+            else:
+                print(f"Warning: Extension {ext} not found")
+
+        # Create driver with explicit service
+        service = Service('/usr/bin/chromedriver')
+        driver = webdriver.Chrome(service=service, options=options)
+        print("Chrome driver created successfully")
+
+        # Create cookies_save directory if it doesn't exist
+        os.makedirs("cookies_save", exist_ok=True)
+
+        # Rest of your original code remains the same...
         tools_mughal = {"semrush":"https://session.mughalseotools.com/semrushfull/semrushfull.php",
                  "grammarly":"https://session.mughalseotools.com/grammarly/grammarly.php",
                  "moz":"https://session.mughalseotools.com/moz/moz.php",
@@ -45,51 +74,21 @@ def perform_update():
                  "envato":"https://ee2.azadseo.com/all-items",
                  "Moz2":"https://members.azadseo.com/accessTool/?tool=moz3"}
 
-        options = webdriver.ChromeOptions()
-        options.add_argument('--start-maximized')
-        options.add_argument('--disable-gpu')
-        options.add_argument('--no-sandbox')
-        options.add_argument('--disable-dev-shm-usage')
-        options.add_argument('--remote-debugging-port=9222')
-        
-        # Explicitly set Chrome binary location
-        options.binary_location = "/usr/bin/google-chrome"
-        
-        # Add extensions
-        for ext in [extension_1_path, extension_2_path, extension_3_path, 
-                   extension_4_path, extension_5_path, extension_6_path]:
-            if os.path.exists(ext):
-                options.add_extension(ext)
-            else:
-                print(f"Warning: Extension {ext} not found")
-
-        # Create service object with explicit driver path
-        service = Service('/usr/bin/chromedriver')
-        
-        # Initialize the driver with service and options
-        driver = webdriver.Chrome(service=service, options=options)
-        
-        # Set a default timeout for finding elements
-        driver.implicitly_wait(10)
-
-        # Create cookies_save directory if it doesn't exist
-        os.makedirs("cookies_save", exist_ok=True)
-
         # ---------------------------- MUGHAL COPY COOKIES ------------------------------------------
-        def login_and_get_cookies(url, username, password, tools_dict):
-            driver.get(url)
-            time.sleep(3)
-            
-            username_field = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.ID, "amember-login"))
-            )
-            password_field = driver.find_element(By.ID, "amember-pass")
+        url = "https://app.mughalseotools.com/login" 
+        driver.get(url)
+        time.sleep(3)
+        username = "rockanks"  
+        password = "rockanks12"  
 
-            username_field.send_keys(username)
-            password_field.send_keys(password)
-            password_field.send_keys(Keys.RETURN)
+        username_field = driver.find_element(By.ID, "amember-login") 
+        password_field = driver.find_element(By.ID, "amember-pass")  
 
-            time.sleep(5)
+        username_field.send_keys(username)
+        password_field.send_keys(password)
+        password_field.send_keys(Keys.RETURN)  
+
+        time.sleep(5)
 
             for key, value in tools_dict.items():
                 try:
