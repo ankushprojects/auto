@@ -67,6 +67,7 @@ def perform_update():
         options.add_extension(extension_4_path)
         options.add_extension(extension_5_path)
         options.add_extension(extension_6_path)
+        # options.add_argument("--disable-extensions")
 
         driver = webdriver.Chrome(options=options)
 
@@ -212,7 +213,7 @@ def perform_update():
 
     #---------------------------- UPDATE COOKIES ------------------------------------------
 
-        url = "https://cloud.rainyclouds.in/member"  
+        url = "https://cloud.rainyclouds.in/member"
         driver.get(url)
 
         time.sleep(3)
