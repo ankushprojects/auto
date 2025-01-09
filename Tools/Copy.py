@@ -5,29 +5,53 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
-import json
-import os
 
 def perform_update():
-    # Cookies Download : MUGHAL SEO : SEMRUSH 1 
-    extension_1_path = "mughex1.zip"  
-    extension_2_path = "mughex2.zip" 
-    extension_3_path = "royal1.zip"  
-    extension_4_path = "Royal2.zip"
-    extension_5_path = "azadseo1.zip"
-    extension_6_path = "azadseo2.zip"
-
     try:
+        # Chrome options configuration
+        options = webdriver.ChromeOptions()
+        
+        # Basic Chrome settings
+        options.add_argument('--no-sandbox')
+        options.add_argument('--headless')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--window-size=1920,1080')
+        
+        # Extension handling
+        extension_paths = [
+            '/app/mughex1.zip',
+            '/app/mughex2.zip',
+            '/app/royal1.zip',
+            '/app/Royal2.zip',
+            '/app/azadseo1.zip',
+            '/app/azadseo2.zip'
+        ]
+        
+        # Properly handle extension loading
+        options.add_argument('--disable-extensions-except=' + ','.join(extension_paths))
+        options.add_argument('--load-extension=' + ','.join(extension_paths))
+        
+        # Additional settings for stability
+        options.add_argument('--disable-web-security')
+        options.add_argument('--allow-running-insecure-content')
+        options.add_argument('--ignore-certificate-errors')
+        
+        # Initialize webdriver with extended timeout
+        driver = webdriver.Chrome(options=options)
+        driver.set_page_load_timeout(30)
+        
+        # Create cookies directory if it doesn't exist
+        os.makedirs('cookies_save', exist_ok=True)
 
-        tools_mughal = {"semrush":"https://session.mughalseotools.com/semrushfull/semrushfull.php",
-                 "grammarly":"https://session.mughalseotools.com/grammarly/grammarly.php",
-                 "moz":"https://session.mughalseotools.com/moz/moz.php",
-                 "ubersuggest":"https://session.mughalseotools.com/ubersuggest/ubersuggest.php"}
+        # Your existing tool dictionaries
+        tools_mughal = {
+            "semrush": "https://session.mughalseotools.com/semrushfull/semrushfull.php",
+            "grammarly": "https://session.mughalseotools.com/grammarly/grammarly.php",
+            "moz": "https://session.mughalseotools.com/moz/moz.php",
+            "ubersuggest": "https://session.mughalseotools.com/ubersuggest/ubersuggest.php"
+        }
         
         tools_royal = {"semrush2":"https://sem1.royalseotools.com/projects",
                  "semrush3":"https://sem2.royalseotools.com/",
@@ -260,14 +284,12 @@ def perform_update():
 
 
 
-
-
-
-
-
-
-
-
-
+    except Exception as e:
+        print(f"Error during execution: {str(e)}")
+        raise
     finally:
-        driver.quit()
+        if 'driver' in locals():
+            try:
+                driver.quit()
+            except Exception as e:
+                print(f"Error while closing driver: {str(e)}")
